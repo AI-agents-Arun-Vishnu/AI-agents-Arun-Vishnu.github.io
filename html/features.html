@@ -60,6 +60,14 @@
     .animate-float {
       animation: float 20s infinite ease-in-out;
     }
+    /* Pulse animation for gamification elements */
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 5px 0 rgba(0, 240, 255, 0.5); }
+      50% { box-shadow: 0 0 15px 2px rgba(0, 240, 255, 0.7); }
+    }
+    .pulse-glow {
+      animation: pulse-glow 3s infinite ease-in-out;
+    }
   </style>
 </head>
 <body class="bg-background text-white font-rajdhani relative min-h-screen overflow-x-hidden">
@@ -114,156 +122,137 @@
 
   <!-- Main Features Section -->
   <section class="pt-28 pb-16 relative z-20 px-6 md:px-16 max-w-7xl mx-auto">
-    <div class="text-center mb-12">
+    <div class="text-center mb-16">
       <h1 class="text-4xl md:text-5xl font-bold mb-4">
-        Features That Get You Paid & Gamified
+        Features That Get You More Qualified Meetings
       </h1>
       <p class="text-gray-300 text-lg max-w-2xl mx-auto">
-        We keep it sleek, sassy, and absolutely no-flake. Earn badges, level up, and close deals faster.
+        Book more demos, close more deals, and level up your sales game with our powerful scheduling tools.
       </p>
     </div>
 
-    <!-- Feature #1 (Left text, Right image) -->
-    <div class="flex flex-col md:flex-row items-center gap-8 mb-16">
-      <!-- Text -->
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold mb-3">
-          <i class="fa-solid fa-user-shield text-primary-neon mr-2"></i>
-          No-Show Mitigation AI
-        </h2>
-        <p class="text-gray-200 leading-relaxed">
-          Our AI hunts down ghosters before they flake. Automatic reminders,
-          personalized follow-ups, and a gentle nudge that says, “You better show up.”
-        </p>
-        <p class="mt-4 text-secondary-neon">
-          <strong>Gamification:</strong> Rack up <span class="text-primary-neon">No-Show Ninja points</span>
-          every time a lead actually attends. Level up to “Flake Slayer” for 5 straight on-time shows.
-        </p>
+    <!-- Features List -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      
+      <!-- Feature #1 -->
+      <div class="bg-secondary-bg/50 rounded-xl p-6 border border-primary-neon/20 hover:border-primary-neon/40 transition-all duration-300 hover:shadow-[0_0_10px_rgba(0,240,255,0.2)] group">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 rounded-full bg-primary-neon/10 flex items-center justify-center mr-4 group-hover:pulse-glow">
+            <i class="fa-solid fa-user-shield text-primary-neon text-xl"></i>
+          </div>
+          <h2 class="text-2xl font-semibold">No-Show Mitigation AI</h2>
+        </div>
+        
+        <div class="ml-16 flex items-center mt-4 bg-secondary-neon/10 py-2 px-4 rounded-lg">
+          <i class="fa-solid fa-gamepad text-secondary-neon mr-2"></i>
+          <p class="text-sm">
+            <span class="text-secondary-neon font-medium">LEVEL UP:</span> 
+            <span class="text-primary-neon">No-Show Ninja</span> → <span class="text-primary-neon">Flake Slayer</span>
+            after 5 consecutive on-time shows
+          </p>
+        </div>
       </div>
-      <!-- Image/Graphic Placeholder -->
-      <div class="md:w-1/2 flex justify-center">
-        <!-- Replace with your own image or an SVG -->
-        <div
-          class="w-64 h-64 bg-black/30 border border-primary-neon/20 rounded-xl flex items-center justify-center text-gray-400 text-center"
-        >
-          <span class="px-4">AI Shield / Graphic Here</span>
+      
+      <!-- Feature #2 -->
+      <div class="bg-secondary-bg/50 rounded-xl p-6 border border-primary-neon/20 hover:border-primary-neon/40 transition-all duration-300 hover:shadow-[0_0_10px_rgba(0,240,255,0.2)] group">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 rounded-full bg-primary-neon/10 flex items-center justify-center mr-4 group-hover:pulse-glow">
+            <i class="fa-solid fa-people-arrows text-primary-neon text-xl"></i>
+          </div>
+          <h2 class="text-2xl font-semibold">Round Robin Team Assignments</h2>
+        </div>
+        
+        <div class="ml-16 flex items-center mt-4 bg-secondary-neon/10 py-2 px-4 rounded-lg">
+          <i class="fa-solid fa-gamepad text-secondary-neon mr-2"></i>
+          <p class="text-sm">
+            <span class="text-secondary-neon font-medium">EARN:</span>
+            <span class="text-primary-neon">Team Player XP</span> + bonus for helping teammates
+          </p>
+        </div>
+      </div>
+      
+      <!-- Feature #3 -->
+      <div class="bg-secondary-bg/50 rounded-xl p-6 border border-primary-neon/20 hover:border-primary-neon/40 transition-all duration-300 hover:shadow-[0_0_10px_rgba(0,240,255,0.2)] group">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 rounded-full bg-primary-neon/10 flex items-center justify-center mr-4 group-hover:pulse-glow">
+            <i class="fa-solid fa-comments text-primary-neon text-xl"></i>
+          </div>
+          <h2 class="text-2xl font-semibold">Embeddable AI Chatbot</h2>
+        </div>
+        
+        <div class="ml-16 flex items-center mt-4 bg-secondary-neon/10 py-2 px-4 rounded-lg">
+          <i class="fa-solid fa-gamepad text-secondary-neon mr-2"></i>
+          <p class="text-sm">
+            <span class="text-secondary-neon font-medium">UNLOCK:</span>
+            <span class="text-primary-neon">Chat Champion</span> badge at 50 successful conversions
+          </p>
+        </div>
+      </div>
+      
+      <!-- Feature #4 -->
+      <div class="bg-secondary-bg/50 rounded-xl p-6 border border-primary-neon/20 hover:border-primary-neon/40 transition-all duration-300 hover:shadow-[0_0_10px_rgba(0,240,255,0.2)] group">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 rounded-full bg-primary-neon/10 flex items-center justify-center mr-4 group-hover:pulse-glow">
+            <i class="fa-solid fa-palette text-primary-neon text-xl"></i>
+          </div>
+          <h2 class="text-2xl font-semibold">Full CSS Customization</h2>
+        </div>
+        
+        <div class="ml-16 flex items-center mt-4 bg-secondary-neon/10 py-2 px-4 rounded-lg">
+          <i class="fa-solid fa-gamepad text-secondary-neon mr-2"></i>
+          <p class="text-sm">
+            <span class="text-secondary-neon font-medium">EARN:</span>
+            <span class="text-primary-neon">Design Guru</span> medal at 1,000 visits with zero bounces
+          </p>
+        </div>
+      </div>
+      
+      <!-- Feature #5 -->
+      <div class="bg-secondary-bg/50 rounded-xl p-6 border border-primary-neon/20 hover:border-primary-neon/40 transition-all duration-300 hover:shadow-[0_0_10px_rgba(0,240,255,0.2)] group">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 rounded-full bg-primary-neon/10 flex items-center justify-center mr-4 group-hover:pulse-glow">
+            <i class="fa-solid fa-shield-halved text-primary-neon text-xl"></i>
+          </div>
+          <h2 class="text-2xl font-semibold">Booking Spam Protection</h2>
+        </div>
+        
+        <div class="ml-16 flex items-center mt-4 bg-secondary-neon/10 py-2 px-4 rounded-lg">
+          <i class="fa-solid fa-gamepad text-secondary-neon mr-2"></i>
+          <p class="text-sm">
+            <span class="text-secondary-neon font-medium">ACHIEVE:</span>
+            <span class="text-primary-neon">Security Sentry</span> status after blocking 100+ spam attempts
+          </p>
+        </div>
+      </div>
+      
+      <!-- Feature #6 -->
+      <div class="bg-secondary-bg/50 rounded-xl p-6 border border-primary-neon/20 hover:border-primary-neon/40 transition-all duration-300 hover:shadow-[0_0_10px_rgba(0,240,255,0.2)] group">
+        <div class="flex items-center mb-4">
+          <div class="w-12 h-12 rounded-full bg-primary-neon/10 flex items-center justify-center mr-4 group-hover:pulse-glow">
+            <i class="fa-solid fa-calendar-check text-primary-neon text-xl"></i>
+          </div>
+          <h2 class="text-2xl font-semibold">Smart Availability Detection</h2>
+        </div>
+        
+        <div class="ml-16 flex items-center mt-4 bg-secondary-neon/10 py-2 px-4 rounded-lg">
+          <i class="fa-solid fa-gamepad text-secondary-neon mr-2"></i>
+          <p class="text-sm">
+            <span class="text-secondary-neon font-medium">UNLOCK:</span>
+            <span class="text-primary-neon">Time Wizard</span> badge for booking 20+ meetings without conflicts
+          </p>
         </div>
       </div>
     </div>
 
-    <!-- Feature #2 (Right text, Left image) -->
-    <div class="flex flex-col md:flex-row items-center gap-8 mb-16 md:flex-row-reverse">
-      <!-- Text -->
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold mb-3">
-          <i class="fa-solid fa-people-arrows text-primary-neon mr-2"></i>
-          Round Robin Team Assignments
-        </h2>
-        <p class="text-gray-200 leading-relaxed">
-          Evenly spread out meetings among your closers. No one’s overbooked,
-          and no lead is left hanging. Perfect for high-volume inbound.
-        </p>
-        <p class="mt-4 text-secondary-neon">
-          <strong>Gamification:</strong> Earn <span class="text-primary-neon">Team Player XP</span> for each
-          meeting you handle. Bonus points if you help out a teammate last-minute.
-        </p>
-      </div>
-      <!-- Image/Graphic Placeholder -->
-      <div class="md:w-1/2 flex justify-center">
-        <div
-          class="w-64 h-64 bg-black/30 border border-primary-neon/20 rounded-xl flex items-center justify-center text-gray-400 text-center"
-        >
-          <span class="px-4">Round Robin Graphic</span>
-        </div>
-      </div>
+    <!-- CTA Button -->
+    <div class="text-center mt-16">
+      <button class="border-2 border-primary-neon rounded-full px-8 py-3 text-lg font-medium shadow-[0_0_10px_#00f0ff] hover:bg-primary-neon/20 hover:shadow-[0_0_20px_#00f0ff] transition-all duration-300">
+        Start Booking More Qualified Meetings
+      </button>
     </div>
-
-    <!-- Feature #3 (Left text, Right image) -->
-    <div class="flex flex-col md:flex-row items-center gap-8 mb-16">
-      <!-- Text -->
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold mb-3">
-          <i class="fa-solid fa-comments text-primary-neon mr-2"></i>
-          Embeddable AI Chatbot
-        </h2>
-        <p class="text-gray-200 leading-relaxed">
-          Turn your site into a 24/7 booking machine. Our bot chats like a human, then
-          whips out your schedule. Watch your pipeline fill up while you sleep.
-        </p>
-        <p class="mt-4 text-secondary-neon">
-          <strong>Gamification:</strong> Unlock the <span class="text-primary-neon">Chat Champion</span> badge after
-          50 successful chatbot conversions in a month.
-        </p>
-      </div>
-      <!-- Image/Graphic Placeholder -->
-      <div class="md:w-1/2 flex justify-center">
-        <div
-          class="w-64 h-64 bg-black/30 border border-primary-neon/20 rounded-xl flex items-center justify-center text-gray-400 text-center"
-        >
-          <span class="px-4">Chatbot Graphic</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Feature #4 (Right text, Left image) -->
-    <div class="flex flex-col md:flex-row items-center gap-8 mb-16 md:flex-row-reverse">
-      <!-- Text -->
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold mb-3">
-          <i class="fa-solid fa-palette text-primary-neon mr-2"></i>
-          Full CSS Customization
-        </h2>
-        <p class="text-gray-200 leading-relaxed">
-          Make it look exactly like your brand. Fonts, colors, layout—go wild.
-          Because nothing says “professional” like a cohesive vibe.
-        </p>
-        <p class="mt-4 text-secondary-neon">
-          <strong>Gamification:</strong> Earn the <span class="text-primary-neon">Design Guru medal</span>
-          once your booking page hits 1,000 visits with zero bounces.
-        </p>
-      </div>
-      <!-- Image/Graphic Placeholder -->
-      <div class="md:w-1/2 flex justify-center">
-        <div
-          class="w-64 h-64 bg-black/30 border border-primary-neon/20 rounded-xl flex items-center justify-center text-gray-400 text-center"
-        >
-          <span class="px-4">CSS Branding Preview</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Feature #5 (Left text, Right image) -->
-    <div class="flex flex-col md:flex-row items-center gap-8 mb-16">
-      <!-- Text -->
-      <div class="md:w-1/2">
-        <h2 class="text-2xl font-semibold mb-3">
-          <i class="fa-solid fa-shield-halved text-primary-neon mr-2"></i>
-          Booking Spam Protection
-        </h2>
-        <p class="text-gray-200 leading-relaxed">
-          Enough with the fake signups and bot traffic. We lock it down with
-          CAPTCHAs and IP checks so your real leads shine through.
-        </p>
-        <p class="mt-4 text-secondary-neon">
-          <strong>Gamification:</strong> Achieve <span class="text-primary-neon\">Security Sentry</span> status
-          if you block 100+ spam attempts. Because no one likes spam.
-        </p>
-      </div>
-      <!-- Image/Graphic Placeholder -->
-      <div class="md:w-1/2 flex justify-center">
-        <div
-          class="w-64 h-64 bg-black/30 border border-primary-neon/20 rounded-xl flex items-center justify-center text-gray-400 text-center"
-        >
-          <span class="px-4">Shield / Lock Icon</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Add more features as needed... -->
-
   </section>
 
-  <!-- Footer (Optional) -->
+  <!-- Footer -->
   <footer class="bg-secondary-bg border-t border-primary-neon/10 py-8 px-6 text-center text-gray-400 text-sm">
     <p>
       &copy; 2025 Schedule.ai | Built with <i class="fa-solid fa-heart text-primary-neon"></i> and a dash of sass.
